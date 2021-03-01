@@ -181,4 +181,10 @@ Operations (+, -, *, /)
 Comparisons (<,>, ==)
 Looping (for, while)
 Outside Function call (function())
+
+What causes space complexity?
+Variables
+Data Structures
+Function call
+Allocation
 */
