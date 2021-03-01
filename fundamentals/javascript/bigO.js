@@ -77,8 +77,8 @@ function anotherOne(input) {
 /*
 function uselessFunc(items) {
     console.log(items[0]); // O(1)
-    
-    var middleIndex = Math.floor(items.length / 2); 
+
+    var middleIndex = Math.floor(items.length / 2);
     var index = 0;
 
     while (index < middleIndex) { // O(n/2)
@@ -99,7 +99,7 @@ function compressBoxesTwice(boxes) {
     boxes.forEach(function(boxes) {
         console.log(boxes);
     });
-        
+
     boxes.forEach(function(boxes) {
         console.log(boxes);
     });
@@ -141,7 +141,7 @@ logAllPairsOfArray(boxes);
 
 // on same indentation: add, multiply if nested or 1 more indentation
 
-
+/* //rule 4
 function uselessFunction2(numbers) {
     console.log('these are the numbers:');
     numbers.forEach(function (number) {
@@ -157,3 +157,28 @@ function uselessFunction2(numbers) {
 }
 
 uselessFunction2([1, 2, 3, 4, 5]);
+
+// O(n + n^2) => O(n^2)
+*/
+
+
+/* Stuff to know */
+/*
+Big Os
+O(1) Constant - no loops
+O(logN) Logarithmic - usually searching algorithms have log(n) if they are sorted (binary search) (though not on hash maps)
+O(n) Linear - for loops, while loops
+O(nlog(n)) Log Linear - sorting operations usually
+O(n^2) Quadratic - every element in a collection needs to be compared to every other element. two nested loops
+O(2^n) Exponential - recursive algorithms that solve a problem on size n
+O(n!) Factorial - you are adding a loop for every element
+
+**iterating through half a collection is still O(n)
+**two separate collections: O(n + m), O(n * m)
+
+What can cause time in a function?
+Operations (+, -, *, /)
+Comparisons (<,>, ==)
+Looping (for, while)
+Outside Function call (function())
+*/
