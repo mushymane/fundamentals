@@ -23,9 +23,25 @@ function findNemo(array) {
 }
 
 findNemo(large);
-*/
 
 // O(1) - Constant time
+
+const findNemo2 = array => {
+    array.forEach(fish => {
+        if (fish === 'nemo') {
+            console.log('Found him');
+        }
+    })
+}
+
+const findNemo3 = array => {
+    for (let fish of array) {
+        if (fish === 'nemo') {
+            console.log('Found him');
+        }
+    }
+}
+*/
 
 /*
 const boxes = [0, 1, 2, 3, 4, 5];
@@ -160,6 +176,28 @@ uselessFunction2([1, 2, 3, 4, 5]);
 
 // O(n + n^2) => O(n^2)
 */
+
+/*
+//how much more memory are we adding? we dont have control of input
+//how much memory are we adding within the function?
+function boooo(n) {
+    for (let i = 0; i < n.length; i++) {
+        console.log("booo");
+    }
+}
+booo([1,2,3,4,5]); // space complexity O(1)
+
+function uselessFunc3(n) {
+    let hiArray = [];
+    for (let i = 0; i < n; i++) {
+        hiArray[i] = 'hi';
+    }
+    return hiArray;
+}
+
+uselessFunc3(6); // space complexity O(n)
+*/
+
 
 
 /* Stuff to know */
