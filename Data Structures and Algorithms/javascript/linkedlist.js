@@ -111,6 +111,25 @@ class LinkedList {
         }
         return array;
     }
+
+    // Reverse the Linked List
+    reverse() {
+        if (!this.head.next) {
+            return this.head;
+        }
+        let first = this.head;
+        this.tail = this.head;
+        let second = first.next;
+        while (second) {
+            const temp = second.next;
+            second.next = first;
+            first = second;
+            second = temp;
+        }
+        this.head.next = null;
+        this.head = first;
+        return this.printList();
+    }
 }
 
 // --------------Doubly Linked List--------------
@@ -219,7 +238,7 @@ class DoublyLinkedList {
     }
 }
 
-const myLinkedList = new DoublyLinkedList(57);
+const myLinkedList = new LinkedList(57);
 console.log(myLinkedList.append(25));
 console.log(myLinkedList.append(21));
 console.log(myLinkedList.prepend(4));
@@ -227,7 +246,8 @@ console.log(myLinkedList.insert(3, 143));
 console.log(myLinkedList.remove(0));
 //console.log(myLinkedList.insert(99, 1433))
 console.log(myLinkedList.printList());
-//console.log(myLinkedList.insert(2, 9000));
+console.log(myLinkedList.insert(2, 9000));
 //console.log(myLinkedList);
+console.log(myLinkedList.reverse())
 
 
