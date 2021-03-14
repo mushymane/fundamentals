@@ -51,8 +51,6 @@ myGraph.showConnections();
 
 
 
-
-
 /*
 // Edge list
 const graph = [[0, 2], [2, 3], [2, 1], [1, 3]];
@@ -76,3 +74,7 @@ const graph = {
     3: [0, 1, 1, 0]
 };
 */
+
+// Cyclic vs Acyclic
+// Weighted vs Unweighted
+// Directed vs Undirected
