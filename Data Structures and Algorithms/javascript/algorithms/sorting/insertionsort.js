@@ -20,3 +20,7 @@ function insertionSort(array) {
 
 insertionSort(numbers);
 console.log(numbers);
+
+
+
+// should be used when input is small, items mostly sorted

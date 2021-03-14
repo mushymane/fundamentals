@@ -33,3 +33,9 @@ function merge(left, right) {
 
 const answer = mergeSort(numbers);
 console.log(answer);
+
+
+
+//use mergesort if worried about worst case scenarios
+//good if not worried about memory
+//worse space complexity than quicksort

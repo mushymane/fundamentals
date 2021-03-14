@@ -38,3 +38,8 @@ function swap(array, firstIndex, secondIndex) {
 
 quickSort(numbers, 0, numbers.length - 1);
 console.log(numbers);
+
+
+
+
+//fast, unless using a bad pivot (choose carefully)

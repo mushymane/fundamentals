@@ -20,3 +20,7 @@ function selectionSort(array) {
 
 selectionSort(numbers);
 console.log(numbers);
+
+
+
+//probably will never use

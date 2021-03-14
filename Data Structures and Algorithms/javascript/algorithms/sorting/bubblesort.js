@@ -16,3 +16,7 @@ function bubbleSort(array) {
 
 bubbleSort(numbers);
 console.log(numbers);
+
+
+
+//probably will never use bubblesort
