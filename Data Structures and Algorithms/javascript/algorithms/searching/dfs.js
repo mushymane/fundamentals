@@ -1,4 +1,4 @@
-// Breadth-first search code starts at line 130
+// Depth-first search code starts at line 169
 
 class Node {
     constructor(value) {
@@ -164,6 +164,57 @@ class BinarySearchTree {
         }
         return this.bfsRecursive(queue, list);
     }
+
+    // Depth-first search In Order
+    dfsInOrder() {
+        return traverseInOrder(this.root, []);
+    }
+
+    // DFS post order
+    dfsPreOrder() {
+        return traversePreOrder(this.root, []);
+    }
+
+    // DFS pre order
+    dfsPostOrder() {
+        return traversePostOrder(this.root, []);
+    }
+}
+
+function traverseInOrder(node, list) {
+    //console.log(node.value) // check the path taken
+    if (node.left) {
+        traverseInOrder(node.left, list);
+    }
+    list.push(node.value);
+    if (node.right) {
+        traverseInOrder(node.right, list);
+    }
+    return list;
+}
+
+function traversePreOrder(node, list) {
+    //console.log(node.value) // check the path taken
+    list.push(node.value);
+    if (node.left) {
+        traversePreOrder(node.left, list);
+    }
+    if (node.right) {
+        traversePreOrder(node.right, list);
+    }
+    return list;
+}
+
+function traversePostOrder(node, list) {
+    //console.log(node.value) // check the path taken
+    if (node.left) {
+        traversePostOrder(node.left, list);
+    }
+    if (node.right) {
+        traversePostOrder(node.right, list);
+    }
+    list.push(node.value);
+    return list;
 }
 
 function traverse(node) {
@@ -183,10 +234,16 @@ bst.insert(20);
 bst.insert(170);
 bst.insert(15);
 bst.insert(1);
-// console.log(bst.bfs());
-console.log(bst.bfsRecursive([bst.root], []));
+console.log(bst.dfsInOrder());
+console.log(bst.dfsPreOrder());
+console.log(bst.dfsPostOrder());
 
 
 //      9
 //  4        20
 //1   6   15   170
+
+// 3 Types of DFS ordering/traversal
+// InOrder - [1,4,6,9,15,20,170]
+// PreOrder - [9,4,1,6,20,15,170]
+// PostOrder - [1,6,4,15,170,20,9]
